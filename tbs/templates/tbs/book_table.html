@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Table Booking</title>
+    <style>
+.center {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  margin-right: 200px;
+  margin-left: 250px;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container center">
+
+    <form method="post" action="insert">{% csrf_token %}
+  <fieldset>
+    <legend>Sundew Table booking System</legend>
+    <div class="my-3">
+      <input type="text" id="person_name" name="person_name" class="form-control" placeholder="Your Name">
+    </div>
+      <div class="my-3">
+      <input type="text" id="mob_number" name="mob_number" class="form-control" placeholder="Your Mobile number">
+    </div>
+    <div class="mb-3">
+      <label for="members" class="form-label">Book table for</label>
+      <select id="members" class="form-select" name="members">
+        <option>How many Members?</option>
+        <option>2 Members</option>
+        <option>3 Members</option>
+        <option>5 Members</option>
+        <option>10 Members</option>
+
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Book</button>
+  </fieldset>
+</form>
+
+
+</div>
+</body>
+</html>
